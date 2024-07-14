@@ -42,8 +42,8 @@ packages = ["src/mm_template"]
 venvPath = "."
 venv = ".venv"
 
-[tool.pytest]
-norecursedirs = "./docker/*"
+[tool.pytest.ini_options]
+norecursedirs = ["docker"]
 
 [tool.ruff.lint]
 # Enable Pyflakes and pycodestyle rules.
