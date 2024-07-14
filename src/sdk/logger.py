@@ -43,11 +43,11 @@ def create_logger():
                 "format": "<cyan>❯ {module}:{function} ({line})</cyan> | <green>{time:YYYY-MM-DD at HH:mm:ss.sss}</green>\n{message}\n",
             },
             {
-                "sink": "./logs/file.log",
+                "sink": "./logs/logs.log",
                 "serialize": True,
                 "enqueue": True,
                 "colorize": True,
-                "format": "<light-cyan>❯ {module}:{function} ({line})</light-cyan> | <light-black>{time:YYYY-MM-DD at HH:mm:ss.sss}</light-black>\n{message}\n",
+                "format": "<light-cyan>❯ {module}:{function} ({line})</light-cyan> | <light-black>{time:YYYY-MM-DD at HH:mm:ss.sss}</light-black>\n{message}",
             },
         ],
     }
@@ -64,4 +64,3 @@ def print(obj):
 
 
 logger = create_logger()
-
