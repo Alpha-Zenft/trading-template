@@ -40,3 +40,14 @@ packages = ["src/mm_template"]
 [tool.pyright]
 venvPath = "."
 venv = ".venv"
+
+[tool.pytest]
+norecursedirs = "./docker/*"
+
+[tool.ruff.lint]
+# Enable Pyflakes and pycodestyle rules.
+select = ["E", "F"]
+# Never enforce `E501` (line length violations).
+ignore = ["E501"]
+# Never try to fix `F401` (unused imports).
+unfixable = ["F401", "F841"]

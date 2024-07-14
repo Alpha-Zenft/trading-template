@@ -23,7 +23,8 @@ local_docker:
   #!/usr/bin/env bash
   sudo chown -R 472:472 ./docker/grafana_data
   sudo chown -R 472:472 ./docker/provisioning
-  docker compose -f docker/docker-compose.yml up
+  docker compose --env-file .env -f docker/docker-compose.yml up
+
 
 # ============================================= #
 # Code Section
