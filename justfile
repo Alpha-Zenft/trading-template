@@ -7,9 +7,12 @@ default:
 # Dev Section
 # ============================================= #
 install:
+  #!/usr/bin/env bash
   rye sync
   rye run pre-commit install --hook-type pre-push --hook-type commit-msg
-  sudo mkdir /opt/logs
+  if [ ! -d "/opt/logs" ]; then
+    sudo mkdir /opt/logs
+  fi
   sudo chown -R $USER:$USER /opt/logs
 
 cz:
