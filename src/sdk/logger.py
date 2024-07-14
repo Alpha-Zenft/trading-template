@@ -43,7 +43,7 @@ def create_logger():
                 "format": "<cyan>❯ {module}:{function} ({line})</cyan> | <green>{time:YYYY-MM-DD at HH:mm:ss.sss}</green>\n{message}\n",
             },
             {
-                "sink": "./logs/logs.log",
+                "sink": "/opt/logs/logs.log",
                 "serialize": True,
                 "enqueue": True,
                 "colorize": True,

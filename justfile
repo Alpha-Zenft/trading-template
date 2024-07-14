@@ -9,6 +9,8 @@ default:
 install:
   rye sync
   rye run pre-commit install --hook-type pre-push --hook-type commit-msg
+  sudo mkdir /opt/logs
+  sudo chown -R $USER:$USER /opt/logs
 
 cz:
   rye run cz commit --write-message-to-file /tmp/msg

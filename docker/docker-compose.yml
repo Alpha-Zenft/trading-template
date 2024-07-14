@@ -79,7 +79,7 @@ services:
     volumes:
       - ./promtail-config.yaml:/etc/promtail/promtail-config.yaml:ro
       - /var/log:/var/log
-      - $LOGS_DIR:/opt/project
+      - /opt/logs:/opt/project
     command: -config.file=/etc/promtail/promtail-config.yaml
     ports:
       - "9080:9080"
