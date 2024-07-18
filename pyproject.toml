@@ -1,9 +1,9 @@
 [project]
-name = "mm-template"
+name = "trading-template"
 version = "0.1.0"
 description = "Add your description here"
 authors = [
-    { name = "Peter Jordan", email = "p@alphazen.com" }
+    { name = "Alpha Zen", email = "" }
 ]
 dependencies = []
 readme = "README.md"
@@ -11,7 +11,7 @@ requires-python = ">= 3.8"
 license = { text = "MIT" }
 
 [project.scripts]
-"dev" = "mm_template:main"
+"dev" = "trading_template:main"
 
 [tool.rye.scripts]
 rye_script = {cmd = 'echo hello world'}
@@ -36,7 +36,7 @@ dev-dependencies = [
 allow-direct-references = true
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/mm_template"]
+packages = ["src/trading_template"]
 
 [tool.pyright]
 venvPath = "."
